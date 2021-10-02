@@ -1,0 +1,1 @@
+{"version":3,"sources":["src\\styles\\main.scss"],"names":[],"mappings":"AAAA;EACC;;;AAGD;EACC","file":"src.a2b27638.css","sourceRoot":"..","sourcesContent":["body {\r\n\tbackground: brown;\r\n}\r\n\r\ndiv {\r\n\tborder: 1px solid green;\r\n}"]}
