@@ -1,0 +1,34 @@
+---
+stylesheets:
+  - ../../../static/fonts/fonts.css
+  - ../../styles/main.scss
+title: Login
+inputs:
+  - label: Логин
+  - label: Пароль
+label: Логин
+buttons:
+  - type: default
+    text: Авторизоваться
+  - type: simple
+    text: Нет аккаунта?
+---
+
+{{#extend "base"}}
+	{{#content "main"}}
+		<div class="login">
+			<div class="login__overlay"></div>
+			<div class="login__form">
+				<div class="login__title text-center mrb-20">Вход</div>
+				<form>
+					{{#each inputs}}
+						{{> input }}
+					{{/each}}
+				    {{#each buttons}}
+				    	{{> button }}
+				    {{/each}}
+				</form>
+			</div>
+		</div>
+	{{/content}}
+{{/extend}}
