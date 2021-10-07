@@ -9,6 +9,34 @@ body {
 	text-align: center;
 }
 
+.d-flex {
+	display: flex;
+}
+
+.dir-column {
+	flex-direction: column;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+:root {
+	--color-blue: #3369F3;
+	--color-deep-blue: #3369d2;
+	--color-gray: #999999;
+	--color-deep-gray: #1E1E1E;
+	--color-white: #fff;
+}
+
+@mixin font($size, $lineheight, $fontfamily, $weight) {
+	font: $weight #{$size}px/#{$lineheight}px $fontfamily;
+}
+
 $numbers: 2, 4, 6, 8, 10, 20;
 
 @each $i in $numbers {
@@ -17,7 +45,48 @@ $numbers: 2, 4, 6, 8, 10, 20;
 	}
 }
 
-.login {
+@mixin input-style {
+	label {
+		color: var(--color-gray);
+		@include font(10,10,'Inter',300);
+	}
+	input {
+		border: none;
+		border-bottom: 1px solid var(--color-blue);
+		padding: 7px 0;
+		width: 100%;
+		@include font(13,13,'Inter',300);
+
+		&:focus {
+			outline: none;
+			border-bottom-width: 2px;
+		}
+	}
+}
+
+.button {
+	padding: 12px;
+	border: none;
+	border-radius: 8px;
+	@include font(11,11,'Inter',500);
+	transition: .2s;
+
+	&--simple {
+		color: var(--color-blue);
+		background-color: transparent;
+	}
+
+	&--default {
+		color: var(--color-white);
+		background-color: var(--color-blue);
+
+		&:hover {
+			background-color: var(--color-deep-blue);
+		}
+	}
+}
+
+.intro {
 	&__overlay {
 		position: fixed;
 		top: 0;
@@ -26,18 +95,28 @@ $numbers: 2, 4, 6, 8, 10, 20;
 		height: 100%;
 		background-color: #fff;
 	}
-	&__form {
+	&__card {
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		box-sizing: border-box;
 		transform: translate(-50%,-50%);
 		width: 340px;
+		min-height: 450px;
 		box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
 		padding: 30px;
 		border-radius: 12px;
 		font-family: 'Inter';
 	}
-	&__title {
-		font: 500 20px/20px 'Inter';
+
+	@include input-style;
+
+	h1 {
+		@include font(20,20,'Inter',500);
+		color: var(--color-deep-gray);
+	}
+
+	form {
+		flex: 1;
 	}
 }
