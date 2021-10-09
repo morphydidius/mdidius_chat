@@ -1,0 +1,19 @@
+@mixin font($size, $lineheight, $fontfamily, $weight) {
+	font: $weight #{$size}px/#{$lineheight}px $fontfamily;
+}
+
+.text-center {
+	text-align: center;
+}
+
+a.link {
+	color: var(--color-blue);
+	text-decoration: none;
+	transition: .2s;
+
+	&:hover, &:visited, &:active {
+		color: var(--color-deep-blue);
+	}
+
+	@include font(11,11,'Inter',500);
+}

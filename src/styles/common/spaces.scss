@@ -1,0 +1,22 @@
+$numbers: 2, 4, 6, 8, 10, 20, 35;
+
+@each $i in $numbers {
+	.mrb-#{$i} {
+		margin-bottom: ($i)*2+px;
+	}
+	.mrt-#{$i} {
+		margin-top: ($i)*2+px;
+	}
+}
+
+.top-0 {
+	top: 0;
+}
+
+.left-0 {
+	left: 0;
+}
+
+.right-0 {
+	right: 0;
+}

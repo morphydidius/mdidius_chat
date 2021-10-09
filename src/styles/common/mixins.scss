@@ -1,0 +1,18 @@
+@mixin input-style {
+	label {
+		color: var(--color-gray);
+		@include font(10,10,'Inter',300);
+	}
+	input {
+		border: none;
+		border-bottom: 1px solid var(--color-blue);
+		padding: 7px 0;
+		width: 100%;
+		@include font(13,13,'Inter',300);
+
+		&:focus {
+			outline: none;
+			border-color: --color-deep-blue;
+		}
+	}
+}

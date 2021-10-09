@@ -2,21 +2,33 @@
 stylesheets:
   - ../../../static/fonts/fonts.css
   - ../../styles/main.scss
-title: Вход
+title: Регистрация
 inputs:
+  - label: Почта
+    type: email
+    name: email
   - label: Логин
     type: text
     name: login
+  - label: Имя
+    type: text
+    name: first_name
+  - label: Фамилия
+    type: text
+    name: second_name
+  - label: Телефон
+    type: text
+    name: phone
   - label: Пароль
     type: password
     name: password
 label: Логин
 buttons:
   - type: default
-    text: Авторизоваться
+    text: Зарегистрироваться
     width: 100
   - type: simple
-    text: Нет аккаунта?
+    text: Войти
     width: 100
 ---
 

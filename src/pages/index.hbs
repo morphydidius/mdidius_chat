@@ -1,14 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../../static/fonts/fonts.css">
-	<title>Document</title>
-</head>
-<body>
-	<div id="main">
-		<a href="./login/login.hbs">login</a>
-	</div>
-</body>
-</html>
+---
+stylesheets:
+  - ../../static/fonts/fonts.css
+  - ../styles/main.scss
+title: Главная
+links:
+  - href: ./login/login.hbs
+    link: Авторизация
+  - href: ./registration/registration.hbs
+    link: Регистрация
+  - href: ./404/404.hbs
+    link: 404
+  - href: ./500/500.hbs
+    link: 500
+---
+
+{{#extend "base"}}
+	{{#content "main"}}
+		{{#each links}}
+			<div>{{> link}}</div>
+		{{/each}}
+	{{/content}}
+{{/extend}}

@@ -1,28 +1,10 @@
+@import "common/index";
+
 body {
-	background: brown;
+	background: #fff;
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.d-flex {
-	display: flex;
-}
-
-.dir-column {
-	flex-direction: column;
-}
-
-.justify-content-between {
-	justify-content: space-between;
-}
-
-.w-100 {
-	width: 100%;
 }
 
 :root {
@@ -31,37 +13,6 @@ body {
 	--color-gray: #999999;
 	--color-deep-gray: #1E1E1E;
 	--color-white: #fff;
-}
-
-@mixin font($size, $lineheight, $fontfamily, $weight) {
-	font: $weight #{$size}px/#{$lineheight}px $fontfamily;
-}
-
-$numbers: 2, 4, 6, 8, 10, 20;
-
-@each $i in $numbers {
-	.mrb-#{$i} {
-		margin-bottom: ($i)*2+px;
-	}
-}
-
-@mixin input-style {
-	label {
-		color: var(--color-gray);
-		@include font(10,10,'Inter',300);
-	}
-	input {
-		border: none;
-		border-bottom: 1px solid var(--color-blue);
-		padding: 7px 0;
-		width: 100%;
-		@include font(13,13,'Inter',300);
-
-		&:focus {
-			outline: none;
-			border-bottom-width: 2px;
-		}
-	}
 }
 
 .button {
@@ -118,5 +69,19 @@ $numbers: 2, 4, 6, 8, 10, 20;
 
 	form {
 		flex: 1;
+	}
+}
+
+.errors {
+	background-color: #fff;
+
+	h1 {
+		@include font(40,40,'Inter',500);
+		color: var(--color-deep-gray);
+	}
+
+	h2 {
+		@include font(20,20,'Inter',500);
+		color: var(--color-deep-gray);
 	}
 }
