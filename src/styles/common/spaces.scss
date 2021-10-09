@@ -1,4 +1,4 @@
-$numbers: 2, 4, 6, 8, 10, 20, 35;
+$numbers: 2, 4, 6, 8, 10, 20, 35, 40;
 
 @each $i in $numbers {
 	.mrb-#{$i} {
@@ -6,6 +6,12 @@ $numbers: 2, 4, 6, 8, 10, 20, 35;
 	}
 	.mrt-#{$i} {
 		margin-top: ($i)*2+px;
+	}
+	.pdb-#{$i} {
+		padding-bottom: ($i)*2+px;
+	}
+	.pdt-#{$i} {
+		padding-top: ($i)*2+px;
 	}
 }
 

@@ -1,0 +1,10 @@
+<div class="field mrb-2">
+	<label class="d-flex justify-content-between align-items-center w-100">
+		<span class="field__name">{{ label }}</span>
+		{{#if disabled}}
+			<div class="field__enter text-right">{{ placeholder }}</div>
+		{{else}}
+		<input type="{{ type }}" name="{{ name }}" placeholder="{{ placeholder }}" class="field__enter text-right">
+		{{/if}}
+	</label>
+</div>

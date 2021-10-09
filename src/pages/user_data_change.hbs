@@ -1,0 +1,40 @@
+---
+stylesheets:
+  - ../../static/fonts/fonts.css
+  - ../styles/main.scss
+fields:
+  - label: Почта
+    type: email
+    name: email
+    placeholder: pochta@yandex.ru
+  - label: Логин
+    type: text
+    name: login
+    placeholder: ivanivanov
+  - label: Имя
+    type: text
+    name: first_name
+    placeholder: Иван
+  - label: Фамилия
+    type: text
+    name: second_name
+    placeholder: Иванов
+  - label: Имя в чате
+    type: text
+    name: display_name
+    placeholder: Иван
+  - label: Телефон
+    type: phone
+    name: phone
+    placeholder: +7 (909) 967 30 30
+buttons:
+  - text: Сохранить
+    type: default
+    width: 50
+---
+
+{{#extend "base"}}
+	{{#content "main"}}
+		{{> settings}}
+	{{/content}}
+{{/extend}}

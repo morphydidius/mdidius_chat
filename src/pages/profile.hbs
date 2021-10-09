@@ -1,0 +1,50 @@
+---
+stylesheets:
+  - ../../static/fonts/fonts.css
+  - ../styles/main.scss
+title: Иван
+fields:
+  - label: Почта
+    type: email
+    name: email
+    placeholder: pochta@yandex.ru
+    disabled: true
+  - label: Логин
+    type: text
+    name: login
+    placeholder: ivanivanov
+    disabled: true
+  - label: Имя
+    type: text
+    name: first_name
+    placeholder: Иван
+    disabled: true
+  - label: Фамилия
+    type: text
+    name: second_name
+    placeholder: Иванов
+    disabled: true
+  - label: Имя в чате
+    type: text
+    name: display_name
+    placeholder: Иван
+    disabled: true
+  - label: Телефон
+    type: phone
+    name: phone
+    placeholder: +7 (909) 967 30 30
+    disabled: true
+controls:
+  - text: Изменить данные
+    color: blue
+  - text: Изменить пароль
+    color: blue
+  - text: Выйти
+    color: red
+---
+
+{{#extend "base"}}
+	{{#content "main"}}
+		{{> settings}}
+	{{/content}}
+{{/extend}}
