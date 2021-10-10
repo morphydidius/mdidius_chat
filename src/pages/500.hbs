@@ -1,0 +1,15 @@
+---
+stylesheets:
+  - ../../static/fonts/fonts.css
+  - ../styles/main.scss
+title: 500
+description: Мы уже фиксим
+link: Назад к чатам
+href: index.hbs
+---
+
+{{#extend "base"}}
+  	{{#content "main"}}
+  		  {{> errors }}
+  	{{/content}}
+{{/extend}}

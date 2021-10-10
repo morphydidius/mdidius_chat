@@ -1,0 +1,35 @@
+@use 'sass:math';
+
+.d-flex {
+	display: flex;
+}
+
+.dir-column {
+	flex-direction: column;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+$widths: 50, 75, 100;
+
+@each $i in $widths {
+	.w-#{$i} {
+		width: math.percentage(($i)*0.01);
+	}
+	.h-#{$i} {
+		height: math.percentage(($i)*0.01);
+	}
+	.hv-#{$i} {
+		height: $i+vh;
+	}
+}

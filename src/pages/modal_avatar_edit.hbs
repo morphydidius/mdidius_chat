@@ -1,0 +1,33 @@
+---
+stylesheets:
+  - ../../static/fonts/fonts.css
+  - ../styles/main.scss
+title: Изменить аватар
+width: 340
+statusDirective: Загрузите файл
+file: file.png
+href: #
+link: Выберите файл
+buttons:
+  - type: default
+    text: Поменять
+    width: 100
+message:
+  - Ошибка
+---
+
+{{#extend "modal"}}
+    {{#content "content"}}
+        <div class="text-center">
+            <div class="modal__status-directive mrb-20">{{ statusDirective }}</div>
+            <div class="mrb-4">{{> link}}</div>
+            <div class="modal__filename mrb-4">{{ file }}</div>
+            {{#each buttons}}
+                <div class="mrt-20">
+                    {{> button}}
+                </div>
+            {{/each}}
+            <div class="invalid mrt-8">{{ message }}</div>
+        </div>
+    {{/content}}
+{{/extend}}

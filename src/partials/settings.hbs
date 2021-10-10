@@ -1,0 +1,26 @@
+<div class="settings w-100 hv-100 top-0 left-0 right-0 d-flex dir-column pdt-35">
+	{{> back-to-chats}}
+	<div class="settings__content">
+		<div class="d-flex justify-content-center mrb-10">
+			{{> avatar }}
+		</div>
+		<h1 class="mrb-35 text-center">
+			{{ title }}
+		</h1>
+		<form class="mrb-20">
+			{{#each fields}}
+				{{> field}}
+			{{/each}}
+		</form>
+		<div class="settings__control">
+			{{#each controls}}
+				{{> field-button}}
+			{{/each}}
+		</div>
+		<div class="settings__buttons text-center">
+			{{#each buttons}}
+				{{> button}}
+			{{/each}}
+		</div>
+	</div>
+</div>

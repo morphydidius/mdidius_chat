@@ -1,0 +1,28 @@
+---
+stylesheets:
+  - ../../static/fonts/fonts.css
+  - ../styles/main.scss
+title: Вход
+inputs:
+  - label: Логин
+    type: text
+    name: login
+    invalid: Неправильный логин
+  - label: Пароль
+    type: password
+    name: password
+label: Логин
+buttons:
+  - type: default
+    text: Авторизоваться
+    width: 100
+  - type: simple
+    text: Нет аккаунта?
+    width: 100
+---
+
+{{#extend "base"}}
+	{{#content "main"}}
+		{{> intro }}
+	{{/content}}
+{{/extend}}

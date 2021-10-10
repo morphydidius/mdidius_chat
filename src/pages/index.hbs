@@ -1,0 +1,42 @@
+---
+stylesheets:
+  - ../../static/fonts/fonts.css
+  - ../styles/main.scss
+title: Главная
+links:
+  - href: ./login.hbs
+    link: Авторизация
+    type: main
+  - href: ./registration.hbs
+    link: Регистрация
+    type: main
+  - href: ./404.hbs
+    link: 404
+    type: main
+  - href: ./500.hbs
+    link: 500
+    type: main
+  - href: ./profile.hbs
+    link: Профиль
+    type: main
+  - href: ./user_data_change.hbs
+    link: Изменение данных пользователя
+    type: main
+  - href: ./user_password_change.hbs
+    link: Изменение пароля
+    type: main
+  - href: ./modal_avatar_edit.hbs
+    link: Изменение аватара (модалка)
+    type: main
+  - href: ./loader_page.hbs
+    link: Лоадер
+    type: main
+---
+
+{{#extend "base"}}
+  	{{#content "main"}}
+    		{{#each links}}
+    			 <div class="mrb-4 mrt-4">{{> link}}</div>
+    		{{/each}}
+  	{{/content}}
+{{/extend}}
