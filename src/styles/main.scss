@@ -16,6 +16,7 @@ body {
 	--color-white: #fff;
 	--color-show: #fbfbfb;
 	--color-red: #ff0000;
+	--color-dark-overlay: rgba(0, 0, 0, .5);
 }
 
 .button {
@@ -37,6 +38,18 @@ body {
 		&:hover {
 			background-color: var(--color-deep-blue);
 		}
+	}
+}
+
+.input {
+	position: relative;
+
+	.invalid {
+		position: absolute;
+		top: auto;
+		left: 0;
+		color: var(--color-red);
+		bottom: -14px;
 	}
 }
 
@@ -186,4 +199,50 @@ body {
 			cursor: pointer;
 		}
 	}
+}
+
+.modal {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+
+	&__overlay {
+		background: var(--color-dark-overlay);
+	}
+	&__window {
+		padding: 40px 30px;
+		background: var(--color-white);
+		border-radius: 12px;
+	}
+	&__status-directive {
+		@include font(15,20,'Inter',500);
+		color: var(--color-dark-gray);
+	}
+	&__filename {
+		@include font(14,16,'Inter',500);
+		color: var(--color-gray);
+	}
+	.invalid {
+		color: var(--color-red);
+		@include font(12,12,'Inter',500);
+	}
+}
+
+.loader {
+	width: 100vw;
+	height: 100vh;
+	background: var(--color-dark-overlay);
+
+	&__icon {
+		animation: loading 2s linear infinite forwards;
+	}
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

@@ -20,4 +20,8 @@ a.link {
 	}
 
 	@include font(11,11,'Inter',500);
+
+	&.main {
+		@include font(14,14,'Inter',500);
+	}
 }
